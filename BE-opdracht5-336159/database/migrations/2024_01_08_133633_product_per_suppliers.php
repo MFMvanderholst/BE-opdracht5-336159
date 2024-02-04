@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('product_per_suppliers', function (Blueprint $table) {
             $table->id();
-            $table->integer('supplier_id');
-            $table->integer('poduct_id');
+            $table->unsignedBigInteger('supplier_id');
+            $table->unsignedBigInteger('product_id');
             $table->date('date_delivery');
             $table->integer('amount');
-            $table->date('first_next_delivery');
+            $table->date('first_next_delivery')->nullable();
             $table->timestamp('last_used_at')->nullable();
             $table->timestamp('expires_at')->nullable();
             $table->timestamps();

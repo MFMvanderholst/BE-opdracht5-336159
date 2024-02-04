@@ -1,0 +1,27 @@
+body {
+    font-family: Verdana;
+}
+
+th {
+    border: 3px solid black;
+}
+
+td {
+    border: 3px solid black;
+}
+
+img {
+    width: 4em;
+}
+
+a {
+    width: 4em;
+}
+
+.active {
+    background-color: green;
+}
+
+.absent {
+    background-color: red;
+}

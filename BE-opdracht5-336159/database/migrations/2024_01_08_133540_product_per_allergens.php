@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('product_per_allergens', function (Blueprint $table) {
             $table->id();
-            $table->integer('product_id');
-            $table->integer('allergen_id');
+            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('allergen_id');
             $table->timestamp('last_used_at')->nullable();
             $table->timestamp('expires_at')->nullable();
             $table->timestamps();

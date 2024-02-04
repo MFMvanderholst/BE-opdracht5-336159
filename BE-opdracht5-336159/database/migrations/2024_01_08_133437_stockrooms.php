@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('stockrooms', function (Blueprint $table) {
             $table->id();
-            $table->integer('product_id');
+            $table->unsignedBigInteger('product_id');
             $table->decimal('packaging_unit');
-            $table->integer('number_present');
+            $table->string('number_present')->nullable();
             $table->timestamp('last_used_at')->nullable();
             $table->timestamp('expires_at')->nullable();
             $table->timestamps();
