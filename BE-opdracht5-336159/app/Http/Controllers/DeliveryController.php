@@ -26,7 +26,7 @@ class DeliveryController extends Controller
         
     }
 
-    public function show()
+    public function show($id)
     {
         
     }

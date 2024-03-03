@@ -13,7 +13,7 @@ class Product_per_supplier extends Model
     use HasFactory;
 
     protected $table = "product_per_suppliers";
-    protected $fillable = ["supplier_id", "poduct_id", "date_delivery", "amount", "first_next_delivery"];
+    protected $fillable = ["supplier_id", "product_id", "date_delivery", "amount", "first_next_delivery"];
 
     public function supplier(): BelongsTo
     {
@@ -23,5 +23,10 @@ class Product_per_supplier extends Model
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
+    }
+
+    public function stockroom(): BelongsTo
+    {
+        return $this->belongsTo(Stockroom::class);
     }
 }

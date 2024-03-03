@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StockroomController;
 use App\Http\Controllers\DeliveryController;
+use App\Http\Controllers\SupplierController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,10 +22,15 @@ Route::get('/', function () {
 });
 
 Route::resource('stockroom', StockroomController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['index']);
 
 Route::resource('/delivery', DeliveryController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['index']);
+
+Route::resource('supplier', SupplierController::class)
+    ->only(['index']);
+    
+Route::get('supplier/{id}', [SupplierController::class, 'show'] );
 
 Route::get('/dashboard', function () {
     return view('dashboard');

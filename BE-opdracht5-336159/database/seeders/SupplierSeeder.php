@@ -50,6 +50,13 @@ class SupplierSeeder extends Seeder
             "mobile" => "06-34291234"
         ]);
 
+        Supplier::create([ 
+            "name" => "Quality Street", 
+            "contact_person" => "Johan Nooji", 
+            "supplier_number" => "L1029234586",
+            "mobile" => "06-23458456"
+        ]);
+
         $this->command->info('Supplier is filled');
     }
 }
