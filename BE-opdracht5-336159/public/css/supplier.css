@@ -1,0 +1,44 @@
+body {
+    font-family: Verdana;
+}
+
+tbody {
+    display: flex;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+}
+
+.tail {
+    display: flex;
+    flex-direction: column;
+
+}
+
+th {
+    border: 3px solid black;
+    padding: 0.5rem;
+}
+
+td {
+    border: 3px solid black;
+    padding: 0.44rem;
+}
+
+img {
+    width: 4em;
+}
+
+a {
+    width: 4em;
+}
+
+.active {
+    background-color: green;
+}
+
+.absent {
+    background-color: red;
+}

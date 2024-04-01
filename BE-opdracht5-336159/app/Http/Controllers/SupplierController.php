@@ -36,16 +36,6 @@ class SupplierController extends Controller
         ]);
     }
 
-    public function create()
-    {
-        
-    }
-
-    public function store()
-    {
-        
-    }
-
     public function show($id)
     {
         $supplier = Supplier::findorfail($id);

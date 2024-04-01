@@ -36,6 +36,12 @@ return new class extends Migration
                   ->references('id')
                   ->on('products');
         });
+
+        Schema::table('suppliers', function (Blueprint $table) {
+            $table->foreign('contact_id')
+                  ->references('id')
+                  ->on('contacts');
+        });
     }
 
     /**
@@ -46,5 +52,6 @@ return new class extends Migration
         Schema::dropIfExists('stockrooms');
         Schema::dropIfExists('product_per_allergens');
         Schema::dropIfExists('product_per_suppliers');
+        Schema::dropIfExists('suppliers');
     }
 };
